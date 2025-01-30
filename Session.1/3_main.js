@@ -2,12 +2,13 @@
 // loops exterior -> primeiro loop que itera todos os numeros
 // loops interior -> segundo loop que itera todos os numeros a partir do index seguinte ao primeiro loop
 
+
 const nums = [2,15,11,7]
 const target = 9
 const num_length = nums.length
 
 
-
+console.time("Counting time");
 function twoSum(){
     // O(n²)
     for(let x = 0; x < num_length; x++){
@@ -21,8 +22,10 @@ function twoSum(){
     return console.log(`Not possible to match the target: ${target}`)
 }
 twoSum()
+console.timeEnd("Counting time");
 
 
+console.time("Counting time");
 function twoSum(){
     // O(n)
     const map = new Map();
@@ -39,6 +42,4 @@ function twoSum(){
 }
 
 twoSum()
-
-
-
+console.timeEnd("Counting time");
