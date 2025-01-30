@@ -7,7 +7,6 @@ const target = 9
 const num_length = nums.length
 
 
-/*
 
 function twoSum(){
     // O(n²)
@@ -23,7 +22,6 @@ function twoSum(){
 }
 twoSum()
 
-*/
 
 function twoSum(){
     // O(n)
