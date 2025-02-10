@@ -25,7 +25,13 @@ _________
 
 function hanoi(n, a, b, c){
 
-    if (n === 1) console.log(`A mover disco ${n}: ${a} -> ${c}`)
+    if (n === 1){ console.log(`A mover disco ${n}: ${a} -> ${c}`)
+        return;
     }
+    hanoi(n-1, a, b, c)
+    console.log(`A mover disco ${n}: ${a} -> ${b}`)
+    hanoi(n-1, c, b, a)
+    }
+    
 
-hanoi(1, 'A', 'B', 'C')
+hanoi(3, 'A', 'B', 'C')
