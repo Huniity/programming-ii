@@ -1,0 +1,61 @@
+{
+  "Paris": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "city": "Paris"
+    },
+    {
+      "id": 29,
+      "name": "Bob",
+      "city": "Paris"
+    }
+  ],
+  "London": [
+    {
+      "id": 42,
+      "name": "Charlie",
+      "city": "London"
+    }
+  ],
+  "Barcelona": [
+    {
+      "id": 12,
+      "name": "Alice",
+      "city": "Barcelona"
+    }
+  ],
+  "Milan": [
+    {
+      "id": 292,
+      "name": "Bob",
+      "city": "Milan"
+    }
+  ],
+  "Porto": [
+    {
+      "id": 421,
+      "name": "Charlie",
+      "city": "Porto"
+    }
+  ],
+  "Faro": [
+    {
+      "id": 14,
+      "name": "Alice",
+      "city": "Faro"
+    },
+    {
+      "id": 219,
+      "name": "Bob",
+      "city": "Faro"
+    }
+  ],
+  "Zurich": [
+    {
+      "id": 429,
+      "name": "Charlie",
+      "city": "Zurich"
+    }
+  ]
+}

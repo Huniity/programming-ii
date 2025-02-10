@@ -1,4 +1,4 @@
-function factorial(n) {  
+ function factorial(n) {  
   if (n === 0) return 1; // Base case  
   return n * factorial(n - 1);
   
@@ -15,6 +15,8 @@ function fib(n) {
 }  
 console.log(fib(10)); // 55 (avoids redundant calculations)  ~
 
+
+
 function traverse(obj, path = []) {  
     if (typeof obj !== 'object') {  
       console.log(path.join('/'), '->', obj);  
@@ -25,8 +27,9 @@ function traverse(obj, path = []) {
     }  
   }  
   
-  const directories = {  
-    src: { utils: { 'math.js': 'content' }, app: 'index.js' },  
-    public: 'assets'  
-  };  
-  traverse(directories);  
+  const nested = {  
+    a: 1,  
+    b: { c: 2, d: { e: 3 } },  
+    f: [4, 5]  
+  }; 
+  traverse(nested);
