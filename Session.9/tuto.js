@@ -20,3 +20,36 @@ function countWords(filename) {
 console.log(countWords('poem.txt'));  
 
 // https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split
+const winston = require("winston")
+
+const logger = winston.createLogger({  
+  level: 'debug',  
+  transports: [new winston.transports.File({
+    filename: "cenas.log"
+  })],  
+}); 
+
+class ValidationError extends Error{
+  constructor(message){
+    super(message);
+    this.bananas = message;
+    logger.info(`Validation '${this.bananas}'`)
+  }
+}
+
+try {
+  const cenas = false;
+  if (!cenas){
+    logger.Error("Cenas is not valid");
+    throw new ValidationError("Bang");
+  }
+} catch(e){
+  if (e instanceof(ValidationError)){
+    logger.error("cenas",e);
+    console.info("ValidationError")
+  }
+  else{
+    logger.error(e)
+    console.error("Common error")
+  }
+}
