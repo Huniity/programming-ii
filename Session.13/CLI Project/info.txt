@@ -1,0 +1,8 @@
+https://sheetdb.io/use-cases/google-spreadsheet-data-with-node-js
+https://www.101computing.net/poker-card-game-javascript/
+https://developer.ticketmaster.com/products-and-docs/apis/getting-started/
+https://chompthis.com/api/
+
+npm i --save-dev jest
+npm init
+npm i chalk winston

@@ -1,0 +1,12 @@
+{
+  "name": "session.15",
+  "version": "1.0.0",
+  "description": "stream",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "type": "module",
+  "author": "",
+  "license": "MIT"
+}

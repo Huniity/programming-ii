@@ -1,0 +1,22 @@
+{
+  "name": "session.14",
+  "version": "1.0.0",
+  "description": "math",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "type": "module",
+  "keywords": [
+    "math"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

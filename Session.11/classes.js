@@ -6,6 +6,10 @@ class Animal {
     speak() {
       return `${this.name} makes a noise.`;
     }
+
+    static info(){
+      return `I am a ${this.name} class.`
+    }
   }
   
   class Dog extends Animal {
@@ -31,3 +35,4 @@ class Animal {
   const dog = new Dog("Rex");
   console.log(dog.speak()); // "Rex makes a noise. Rex barks!"
   console.log(cat.speak()); // "Rex makes a noise. Loki Meows!"
+  console.log(Animal.info());
