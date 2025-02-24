@@ -25,7 +25,7 @@ async function fetchCities() {
   const promises = cities.map(city => fetchCity(city));
   const results = await Promise.all(promises);
 
-  fs.writeFileSync('weather.json', JSON.stringify(results.sort((a, b) => a.name - b.name), null, 2));
+  
   console.log(results);
   console.log("Data has been successfuly logged into weather.json")
 
