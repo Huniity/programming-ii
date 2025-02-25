@@ -5,7 +5,7 @@ import { getLogger } from './logger.js';
 const logger = getLogger('NEWS', `../winston.logs/news.logs`);
 const API_KEY_NEWS = "pub_71542c96b63c5f323e4ee1304945d774cd5c9";
 
-export async function randomNews() {
+async function randomNews() {
   try {
     const country = "pt";
     const language = "en";
@@ -43,5 +43,3 @@ export async function printNews() {
     console.error("Error fetching news:", error);
   }
 }
-
-printNews();

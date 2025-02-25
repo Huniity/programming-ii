@@ -18,6 +18,7 @@ export async function getWeatherActivity() { //(city)
     
     if (!geoData.results?.length) throw new Error('City not found');
     const { latitude, longitude, country } = geoData.results[0];
+    console.log(geoData.results[0])
     
     // Get weather
     const weatherRes = await fetch(
@@ -51,4 +52,4 @@ export async function getWeatherActivity() { //(city)
     throw error;
   }
 }
-getWeatherActivity()
+// getWeatherActivity()

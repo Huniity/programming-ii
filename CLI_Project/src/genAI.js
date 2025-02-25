@@ -21,5 +21,3 @@ export async function fetchActivitySuggestion(condition, city) {
     throw error;
   }
 }
-
-fetchActivitySuggestion();

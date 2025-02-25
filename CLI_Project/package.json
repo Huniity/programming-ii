@@ -2,10 +2,11 @@
   "name": "cli_project",
   "version": "1.0.0",
   "description": "CLI Project",
-  "main": "api_quote.js",
+  "main": "./src/cli.js",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "start": "src/cli.js"
   },
   "author": "Adrien Dejonc",
   "license": "MIT",

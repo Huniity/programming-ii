@@ -29,3 +29,21 @@ export const WEATHER_CODES = {
     99: { condition: 'Thunderstorm with heavy hail'},
   };
   
+
+// fs.writeFile('./userdata.json', data, { flag: 'a+' }, (err) => {
+//   if (!err) {
+//     console.log('done');
+//   }
+// });
+
+// ORRRRRRRRRRRR
+
+// fs.readFile('./userdata.json', (err, data) => {
+//   if (err){
+//       console.log(err);
+//   } else {
+//       obj = JSON.parse(data);
+//       obj.push(sendData);
+//       json = JSON.stringify(obj); 
+//       fs.writeFile('./userdata.json', json, callback);
+// }});
