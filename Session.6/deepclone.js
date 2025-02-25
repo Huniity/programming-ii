@@ -11,7 +11,7 @@ function deepCloneWithPaths(obj, prefix = '', result = {}) {
       if (obj.hasOwnProperty(key)) {
         const newKey = prefix ? `${prefix}/${key}` : key;
   
-        // Se for um objeto ou array, continua a recursão
+        // Se for um objeto ou array -> recursão
         if (typeof obj[key] === 'object' && obj[key] !== null) {
           clone[key] = deepCloneWithPaths(obj[key], newKey, result);
         } else {
@@ -24,7 +24,7 @@ function deepCloneWithPaths(obj, prefix = '', result = {}) {
     return clone;
   }
   
-  // Exemplo de uso
+
   const nested = {
     a: 1,
     b: { c: 2, d: { e: 3 } },
@@ -37,7 +37,7 @@ function deepCloneWithPaths(obj, prefix = '', result = {}) {
 console.log(result)
 console.log(clonedNested)
 
-  // Exibir os caminhos e valores
+
   for (const key in result) {
     console.log(`${key} -> ${result[key]}`);
   }

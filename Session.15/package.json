@@ -4,7 +4,7 @@
   "description": "stream",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "type": "module",
   "author": "",

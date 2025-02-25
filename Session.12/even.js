@@ -49,8 +49,6 @@ const items2 = list2(totalItems2)
    
     console.log(Array.from([items3[begin], items3[end], 1], (x) => x + x));
 
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from
-
 
 
  

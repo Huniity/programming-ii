@@ -35,7 +35,7 @@ function trackExecTime(func) {
 }
 
 try {
-  function countWords() {
+   function countWords() {
     try {
       if (!fs.existsSync("poem.txt")) {
         throw new ValidationError ("File does not exist.");
@@ -68,5 +68,7 @@ try {
   return null;
 }
 
-const trackCountWords = trackExecTime(countWords);
+export const trackCountWords = trackExecTime(countWords);
 console.log(`Total of words: ${trackCountWords()}.`);
+
+
