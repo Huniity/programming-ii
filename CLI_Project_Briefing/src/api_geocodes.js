@@ -35,3 +35,20 @@ export async function getGeoLocation(city) {
  * @returns {Promise<Object>} Returns country code in lowercase (otherwise can't read for news API) and country
  * @throws {Error} No city, No Fetch
  */
+
+export async function getGeoCode(city) {
+    try {
+        const geoRes = await fetch(
+            `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1` );
+        if (!geoRes.ok) throw new Error(`⚠️ Failed to fetch. HTTP Error code: ${res.status} ⚠️`);
+            const geoData = await geoRes.json();
+        if (!geoData.results?.length) throw new Error('❌ City not found ❌');
+        return {
+            countryCode: geoData.results[0].country_code.toLowerCase(),
+            countryName: geoData.results[0].country
+        };
+    } catch (error) {
+        logger.error(`❌ Geolocation error: ${error.message} ❌ `);
+        throw error;
+    }
+}
