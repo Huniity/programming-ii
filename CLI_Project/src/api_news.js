@@ -2,9 +2,12 @@ import fetch from "node-fetch";
 import { getLogger } from "./logger.js";
 import { getGeoCode } from "./api_geocode.js";
 import chalk from "chalk";
+import dotenv from "dotenv";
+dotenv.config()
+
 
 const logger = getLogger("NEWS", `../winston.logs/news.logs`);
-const API_KEY_NEWS = "pub_71542c96b63c5f323e4ee1304945d774cd5c9";
+const API_KEY = process.env.API_KEY_NEWS
 
 /**
  * Fetch randomNews by City
@@ -21,7 +24,7 @@ export async function randomNews(city) {
     const { countryCode } = await getGeoCode(city);
     console.log(chalk.whiteBright.bold(`🌍 Searching the wild internet for this country code: ${countryCode}\n`),);
 
-    const newsRes = await fetch(`https://newsdata.io/api/1/latest?apikey=${API_KEY_NEWS}&country=${countryCode}&language=en`,);
+    const newsRes = await fetch(`https://newsdata.io/api/1/latest?apikey=${API_KEY}&country=${countryCode}&language=en`,);
     if (!newsRes.ok) throw new Error(`⚠️  Failed to fetch. HTTP Error code: ${newsRes.status} ⚠️`);
 
     const rawData = await newsRes.json();

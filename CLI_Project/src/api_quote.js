@@ -1,10 +1,11 @@
-import chalk from "chalk";
 import { getLogger } from "./logger.js";
-import { centerText } from "./utils.js";
+import dotenv from "dotenv";
+dotenv.config()
+
 
 const logger = getLogger("QUOTES", "../winston.logs/quote.logs");
-const API_KEY_QUOTE = "Zc8twb5lFzlgUK/ixBmIMQ==SH2qLAFUpc8Er7Rd";
 
+const API_KEY = process.env.API_KEY_QUOTE
 /**
  * Get Random Quote
  * @async
@@ -18,7 +19,7 @@ export async function randomQuote() {
     const res = await fetch(`https://api.api-ninjas.com/v1/quotes`, {
       method: "GET",
       headers: {
-        "X-Api-Key": API_KEY_QUOTE,
+        "X-Api-Key": API_KEY,
       },
     });
     if (!res.ok) {

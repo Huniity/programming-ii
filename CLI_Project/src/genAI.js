@@ -1,10 +1,12 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { getLogger } from './logger.js';
+import dotenv from "dotenv";
+dotenv.config()
 
 const logger = getLogger('GEN AI', `../winston.logs/genai.logs`);
-const API_KEY_GENAI = "AIzaSyCJi23RtwGvNex_sQiDQ1ZxiToQ8Pfi2ZA";
+const API_KEY = process.env.API_KEY_GENAI
 
-const genAI = new GoogleGenerativeAI(`${API_KEY_GENAI}`);
+const genAI = new GoogleGenerativeAI(`${API_KEY}`);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 /**
