@@ -1,6 +1,25 @@
 # Changelog
 
 
+## 0.6.2 - 2025-02-26
+### CHORE: Code Organization
+- Reorganize API modules
+- Separate concerns by service
+- Standardize export patterns
+
+## 0.6.1 - 2025-02-25
+### CHORE: AI Model Migration
+- Migrate from GPT-3 to Gemini 2.0 Flash
+- Update prompt engineering patterns
+- Optimize activity suggestion output
+
+## 0.6.0 - 2025-02-25
+### FEAT: AI Integration
+- Add Chat GPT-3 model integration
+- Implement weather-based activity suggestions
+- Develop AI prompt
+- Add city-specific activity filtering
+
 ## 0.5.2 - 2025-02-25
 ### PERF: API Optimizations
 - Implement concurrent API fetching
