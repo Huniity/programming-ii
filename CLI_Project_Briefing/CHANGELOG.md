@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 - 2025-02-27
+### FEAT: Full Release - My Briefing CLI
+- Finalize all API integrations
+- Stabilize CLI interface
+- Complete documentation and error handling
+- Fixing Minor Typos
+- Fixing News not saving
 
 ## 0.9.1 - 2025-02-26
 ### FIX: Logging Improvements
