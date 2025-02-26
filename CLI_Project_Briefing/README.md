@@ -48,8 +48,9 @@ My Briefing CLI is the perfect choice in my opinion for a small project. It's be
 
 4. **Usage**
     ```bash
-    npm start 
-    npm start -- <city> [OPTIONS]
+    npm start (Main Menu) 
+    npm start -- <city> [OPTIONS] (To access features)
+    npm test (Vitest test)
 
     All [OPTIONS] available are below:
 
@@ -86,6 +87,7 @@ my-briefing-cli/
 │   ├── api_quote.js      # Quote API integration
 │   ├── api_weather.js    # Weather API integration
 │   ├── cli.js            # CLI entry point
+|   ├── cli.test.js       # CLI test file
 │   ├── genAI.js          # Gemini AI integration
 │   ├── logger.js         # Winston logging config
 │   └── utils.js          # Helpers & constants
