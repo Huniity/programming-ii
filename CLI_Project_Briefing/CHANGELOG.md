@@ -1,6 +1,13 @@
 # Changelog
 
 
+## 0.7.0 - 2025-02-26
+### FEAT: CLI Core Features
+- Implement cross-API coordination system
+- Add console layout improvements with chalk
+- Introduce dynamic width centering for output
+- Add --help flag functionality
+
 ## 0.6.2 - 2025-02-26
 ### CHORE: Code Organization
 - Reorganize API modules
