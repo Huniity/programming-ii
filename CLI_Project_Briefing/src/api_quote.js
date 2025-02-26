@@ -23,8 +23,9 @@ export async function randomQuote() {
         "X-Api-Key": API_KEY,
       },
     });
-
-    
+    if (!res.ok) {
+      throw new Error(`⚠️ Failed to fetch. HTTP Error code: ${res.status} ⚠️`);
+    }
     const data = await res.json();
     const filteredQuotes = data.filter((quoteObj) =>
       quoteObj.quote.length <= 250
@@ -38,10 +39,12 @@ export async function randomQuote() {
       console.log(`"${quoteObject.quote}"\n- ${quoteObject.author}\n`);
 
 
-    } 
+    } else {
+      console.log("❌ No quotes found with 250 or fewer characters. ❌");
+    }
 
 
   } catch (error) {
-    console.log(error)
+    logger.error(`❌ Quote error: ${error.message} ❌`);
   }
 }
