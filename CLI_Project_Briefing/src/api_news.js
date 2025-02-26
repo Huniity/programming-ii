@@ -21,7 +21,7 @@ const API_KEY = process.env.API_KEY_NEWS
 export async function randomNews(city) {
   try {
     if (!city) throw new Error ("❌ No City given. ❌");
-
+    const { countryCode } = await getGeoCode(city);
     console.log(chalk.whiteBright.bold(`🌍 Searching the wild internet for this country code: ${countryCode}\n`),);
 
     const newsRes = await fetch(`https://newsdata.io/api/1/latest?apikey=${API_KEY}&country=${countryCode}&language=en`,);
