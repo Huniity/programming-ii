@@ -6,7 +6,7 @@ import chalk from "chalk";
 import { getLogger } from "./logger.js";
 import fs from "node:fs";
 
-const logger = getLogger("CLI", `./winston.logs/cli.logs`);
+const logger = getLogger("CLI", `winston.logs/cli.logs`);
 
 
 /**

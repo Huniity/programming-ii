@@ -4,7 +4,7 @@ import chalk from "chalk";
 dotenv.config()
 
 
-const logger = getLogger("QUOTES", "./winston.logs/quote.logs");
+const logger = getLogger("QUOTES", "winston.logs/quote.logs");
 
 const API_KEY = process.env.API_KEY_QUOTE
 /**

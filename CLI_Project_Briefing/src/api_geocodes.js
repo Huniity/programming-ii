@@ -1,5 +1,5 @@
 import { getLogger } from "./logger.js";
-const logger = getLogger("GEOCODE", `./winston.logs/geo.logs`);
+const logger = getLogger("GEOCODE", `/winston.logs/geo.logs`);
 
 /**
  * GeoLocation API CALL

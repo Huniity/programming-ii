@@ -2,10 +2,10 @@ import fetch from 'node-fetch';
 import { getLogger } from './logger.js';
 import { WEATHER_CODES } from './utils.js';
 import { fetchActivitySuggestion } from './genAI.js';
-import { getGeoLocation } from './api_geocode.js';
+import { getGeoLocation } from './api_geocodes.js';
 import { weatherEmojis } from './utils.js';
 
-const logger = getLogger('WEATHER', './winston.logs/weather.logs');
+const logger = getLogger('WEATHER', 'winston.logs/weather.logs');
 const code_list = WEATHER_CODES;
   
 /**

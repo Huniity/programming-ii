@@ -1,11 +1,13 @@
 # Changelog
-## 0.8.2 - 2025-02-26
+
+
+## 0.9.1 - 2025-02-26
 ### FIX: Logging Improvements
 - Resolve JSON serialization issues
 - Fix date formatting in log filenames
 - Add error catching for file writes
 
-## 0.8.1 - 2025-02-26
+## 0.9.0 - 2025-02-26
 ### FEAT: Help System
 - Add --help flag implementation
 - Create interactive welcome message

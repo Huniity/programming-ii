@@ -1,12 +1,12 @@
 import fetch from "node-fetch";
 import { getLogger } from "./logger.js";
-import { getGeoCode } from "./api_geocode.js";
+import { getGeoCode } from "./api_geocodes.js";
 import chalk from "chalk";
 import dotenv from "dotenv";
 dotenv.config()
 
 
-const logger = getLogger("NEWS", `./winston.logs/news.logs`);
+const logger = getLogger("NEWS", `winston.logs//news.logs`);
 const API_KEY = process.env.API_KEY_NEWS
 
 /**
@@ -63,13 +63,15 @@ export async function printNews(city) {
         ));
         console.log(chalk.blue.bold("📌  News:", title));
         console.log(chalk.whiteBright.bold("📝 "),description.substring(0, 120) + "...",)});
-      return {
-        title: articles.title,
-        description: articles.author,
-      };   
+        return articles;
+    //   return {
+    //     title: articles.title,
+    //     description: articles.author,
+    //   };   
       // console.log("Articles have been written to news.json");
     } else {
       logger.error("❌ No articles found. ❌");
+      return [];
     }
   } catch (error) {
     logger.error("⚠️  Error fetching news: ⚠️", error.message);
