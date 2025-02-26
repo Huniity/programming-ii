@@ -78,6 +78,15 @@ My Briefing CLI is the perfect choice in my opinion for a small project. It's be
         # Get a random quote
             npm start -- --quote
 
+        # Get a full report of your briefing in a .json
+            npm start -- Rome --briefing --save
+
+        # Get report giving your options
+            npm start -- Madrid [OPTION...] --save 
+
+        # Run test with Vitest
+            npm test
+
 5. **Project Structure**
 
 ```
