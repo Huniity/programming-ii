@@ -1,13 +1,32 @@
 # Changelog
 
 
-## 0.3.1 - 2025-02-24
+## 0.5.2 - 2025-02-25
+### PERF: API Optimizations
+- Implement concurrent API fetching
+- Add request timeout handling
+- Cache geocoding results
+
+## 0.5.1 - 2025-02-24
+### FIX: Geocoding Errors
+- Resolve city lookup failures
+- Handle unknown location cases
+- Add input validation system
+
+## 0.5.0 - 2025-02-24
+### FEAT: Geocoding API
+- Replace direct coordinates with city lookup
+- Implement country code detection for news
+- Add weather code translation system
+- Prepare infrastructure for AI integration
+
+## 0.4.1 - 2025-02-24
 ### CHORE: Preparing for AI Intregration
 - Add weather code documentation (utils.js)
 - Update API usage examples
 - Create emoji reference guide
 
-## 0.3.0 - 2025-02-24
+## 0.4.0 - 2025-02-24
 ### FEAT: Weather API 
 - Implement Open-Meteo API integration
 - Add temperature/condition reporting
