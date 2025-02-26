@@ -21,12 +21,15 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 export async function fetchActivitySuggestion(condition, city) {
 
-
+  try {
     const prompt =
       `Suggest outdoor activities suitable for the following weather condition: ${condition} and based on the following city: ${city}. Give me only 2 or 3, no description or whatsoever, only the activies name. Try to have at least 1 activity from the city or surroundings. Please dont make a list with * or numbers. Just split each one of them with a coma. Like this: <activity>, <activity>, <activity>. `;
     const result = await model.generateContent(prompt);
 
     const responseText = result.response.text();
     return responseText.slice(0, -1)
-
+  } catch (error) {
+    logger.error(`❌  GenAI API error: ${error.message} ❌`);
+    throw error;
+  }
 }
