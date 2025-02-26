@@ -6,7 +6,7 @@ import chalk from "chalk";
 import { getLogger } from "./logger.js";
 import fs from "node:fs";
 
-
+const logger = getLogger("CLI", `./winston.logs/cli.logs`);
 
 
 /**
@@ -58,7 +58,7 @@ export function executeTasks() {
                 if (!args[i].startsWith("-") && !city) {
                     city = args[i];
                 } else if (args[i].startsWith("-")) {
- 
+                    logger.error(`❌ Unknown flag: ${args[i]}`);
                 }
         }
     }
@@ -125,7 +125,7 @@ async function generateBriefing(city, save) {
             console.log("\n\n");
         }
     } catch (error) {
-
+        logger.error("❌  Error generating briefing:  ❌", error.message);
     }
 }
 
