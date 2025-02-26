@@ -1,50 +1,61 @@
-
-
-const [command, ...args] = process.argv.slice(2);
+const args = process.argv.slice(2);
 
 const baseLength = 12;
 let choiceLength = baseLength;
-const lowercase = 'abcdefghijklmnopqrstuvwxyz';
-let choice = lowercase;
-const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const number = '0123456789';
-const symbols = '!@#$%^&*()-_=+';
-let generatedPw = '';
+const lowercase = "abcdefghijklmnopqrstuvwxyz";
+const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const numbers = "0123456789";
+const symbols = "!@#$%^&*()-_=+";
+let choice = "";
 
-switch (command.toString().toLowerCase()) {
-    case "uppercase":
-        choice += uppercase;
-        break;
+let includeLowercase = false;
+let includeUppercase = false;
+let includeNumbers = false;
+let includeSymbols = false;
 
-    case "number":
-        choice += number;
-        break;
+for (let i = 0; i < args.length; i++) {
+    switch (args[i].toLowerCase()) {
+        case "uppercase":
+            includeUppercase = true;
+            break;
 
-    case "symbols":
-        choice += symbols;
-        break;
+        case "number":
+            includeNumbers = true;
+            break;
 
-    case "length":
-        if (args[0] && !isNaN(args[0])) {
-            choiceLength = parseInt(args[0]);
-        } else {
-            console.error(("Invalid length provided."));
+        case "symbols":
+            includeSymbols = true;
+            break;
+
+        case "length":
+            if (args[i + 1] && !isNaN(args[i + 1])) {
+                choiceLength = parseInt(args[i + 1]);
+                i++;
+            } else {
+                console.error("Invalid length provided.");
+                process.exit(1);
+            }
+            break;
+
+        default:
+            console.error(`Unknown command: ${args[i]}`);
             process.exit(1);
-        }
-        break;
-
-    default:
-        console.error(("No command with this name."));
-        process.exit(1);
+    }
 }
+
+choice += lowercase;
+includeLowercase = true;
+
+if (includeUppercase) choice += uppercase;
+if (includeNumbers) choice += numbers;
+if (includeSymbols) choice += symbols;
 
 function generatePassword() {
-    let retVal = '';
+    let generatedPw = "";
     for (let i = 0; i < choiceLength; i++) {
-        retVal += choice.charAt(Math.floor(Math.random() * choice.length));
+        generatedPw += choice.charAt(Math.floor(Math.random() * choice.length));
     }
-    return retVal;
+    return generatedPw;
 }
 
-const passwordText = generatePassword();
-console.log(("Generated Password: "), passwordText);
+console.log("Generated Password:", generatePassword());
