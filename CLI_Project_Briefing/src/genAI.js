@@ -6,7 +6,7 @@ dotenv.config()
 const logger = getLogger('GEN AI', `./winston.logs/genai.logs`);
 const API_KEY = process.env.API_KEY_GENAI
 
-const genAI = new OpenAI(`${API_KEY}`);
+const genAI = new GoogleGenerativeAI(`${API_KEY}`);
 const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
 
 /**
