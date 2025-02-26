@@ -178,6 +178,41 @@ function getQuote() {
  * @function getHelp
  */
 
+function getHelp() {
+    console.clear();
+    console.log("\n\n\n\n");
+    console.log(
+        chalk.whiteBright.bold(
+            "🚨🆘🚨  Welcome to the HELP department! 🚨🆘🚨".padStart(105),
+        ),
+    );
+    console.log("\n\n\n");
+    console.log(
+        "🔹 --briefing   📊 Full briefing (weather + news + quote)".padStart(78)
+            .padEnd(115) + "▶️  npm start -- London --briefing",
+    );
+    console.log(
+        "🔹 --weather    🌤️  Weather report only".padStart(61).padEnd(117) +
+            "▶️  npm start -- London --weather",
+    );
+    console.log(
+        "🔹 --news       🗞️  News updates".padStart(54).padEnd(117) +
+            "▶️  npm start -- London --news",
+    );
+    console.log(
+        "🔹 --quote      ✨ Motivational quote".padStart(57).padEnd(114) +
+            "▶️  npm start -- London --quote",
+    );
+    console.log(
+        "🔹 --save       💾 Save all data".padStart(53).padEnd(115) +
+            "▶️  npm start -- London --briefing --save",
+    );
+    console.log(
+        "🔹 --help       🆘 Get some help".padStart(53).padEnd(115) +
+            "▶️  npm start -- --help",
+    );
+    console.log("\n\n");
+}
 
 
 cliMenu();
