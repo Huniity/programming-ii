@@ -1,3 +1,8 @@
+import { getLogger } from "./logger.js";
+import dotenv from "dotenv";
+import chalk from "chalk";
+dotenv.config()
+
 
 const logger = getLogger("QUOTES", "./winston.logs/quote.logs");
 
