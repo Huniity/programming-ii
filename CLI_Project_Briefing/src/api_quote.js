@@ -16,7 +16,6 @@ const API_KEY = process.env.API_KEY_QUOTE
  */
 
 export async function randomQuote() {
-    
   try {
     const res = await fetch(`https://api.api-ninjas.com/v1/quotes`, {
       method: "GET",

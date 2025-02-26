@@ -6,7 +6,6 @@
 - Custom Error message
 - Fixed minor typos
 
-
 ## 0.1.5 - 2025-02-23
 ### CHORE: Logging Infrastructure
 - Implement Winston for Quote API
