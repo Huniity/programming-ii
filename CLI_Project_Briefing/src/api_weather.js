@@ -34,11 +34,29 @@ export async function getWeatherActivity(city) {
 
 
     const conditionEmoji = weatherEmojis[weatherInfo.condition] || "🌍";
-
+     const tableData = {
+      "Weather Info": {
+        "🏙️  City": city,
+        "🌎 Country": country,
+        "🌡️  Temperature": `${current.temperature}°C`,
+        "🌦️  Condition": `${weatherInfo.condition} ${conditionEmoji}`,
+        "🔢  Weather Code": current.weathercode,
+        "🎯 Suggested Activity": activitySuggestion
+      }
+    };
 
     console.table(tableData);
 
 
+    return {
+      weather: {
+        temperature: current.temperature,
+        condition: weatherInfo.condition,
+        country
+      },
+      activity: activitySuggestion
+    };
+    
   } catch (error) {
     logger.error(`❌ Weather error: ${error.message} ❌`);
     throw error;
