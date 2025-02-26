@@ -79,6 +79,7 @@ My Briefing CLI is the perfect choice in my opinion for a small project. It's be
 
 5. **Project Structure**
 
+```
 my-briefing-cli/
 ├── src/
 │   ├── api_news.js       # News API integration
@@ -95,3 +96,5 @@ my-briefing-cli/
 ├── README.md             # Project documentation
 ├── package.json          # NPM dependencies
 └── package-lock.json     # Lock file
+
+```
