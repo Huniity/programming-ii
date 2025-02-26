@@ -98,4 +98,63 @@
       "description": "(MENAFN - Trend News Agency) BAKU, Azerbaijan, February 26. A meeting washeld in the Azerbaijani Parliament with media representatives fromoverseas territories under French colonial rule, Trend ..."
     }
   ]
+}{
+  "generatedAt": "2025-02-26T20:28:07.505Z",
+  "city": "London",
+  "weather": {
+    "weather": {
+      "temperature": 6.3,
+      "condition": "Partly cloudy",
+      "country": "United Kingdom"
+    },
+    "activity": "Visit a Royal Park, Thames River Cruise, Open-air theatre in Regent's Park"
+  },
+  "quote": {
+    "quote": "The true measure of a man is how he treats someone who can do him absolutely no good.",
+    "author": "Samuel Johnson"
+  }
+}{
+  "generatedAt": "2025-02-26T20:28:36.803Z",
+  "city": "London",
+  "weather": {
+    "weather": {
+      "temperature": 6.3,
+      "condition": "Partly cloudy",
+      "country": "United Kingdom"
+    },
+    "activity": "Thames River Cruise, Picnic in Hyde Park, Walking tour of historical landmarks"
+  },
+  "quote": {
+    "quote": "Who soweth good seed shall surely reap; The year grows rich as it groweth old, And life's latest sands are its sands of gold!",
+    "author": "Dorr, Julia Ripley"
+  }
+}{
+  "generatedAt": "2025-02-26T20:29:34.062Z",
+  "city": "Paris",
+  "weather": {
+    "weather": {
+      "temperature": 8.9,
+      "condition": "Light rain showers",
+      "country": "France"
+    },
+    "activity": "Visit the covered passages, Picnic in Jardin du Luxembourg, Seine River cruise."
+  },
+  "quote": {
+    "quote": "If it was just me and Elvis one on one, which only happened once or twice in the times that I did see him, it was a really comfortable. He was a cool guy. Easy laugh, nice guy.",
+    "author": "Mac Davis"
+  },
+  "news": [
+    {
+      "title": "OPINION: Macron's Trump talks made him a hero in America, but a fool in France",
+      "description": "In America, or in half of America, Emmanuel Macron is a hero - writes John Lichfield - the man who fact-checked Donald Trump on live television."
+    },
+    {
+      "title": "PM Bayrou gathers ministers for immigration talks amid Franco-Algerian tensions",
+      "description": "Prime Minister François Bayrou is bringing together key ministers this Wednesday to tackle one of France’s most pressing issues – managing migration flows more effectively.This comes as the French government remains divided on the best approach to immigration and growing tensions with Algeria."
+    },
+    {
+      "title": "ResMed’s Fifth Annual Global Sleep Survey Reveals a World Struggling with Poor Sleep",
+      "description": "New insights from 30,026 people across 13 markets show the global scale of poor sleep and its impact on health, work, and relationships New insights from 30,026 people across 13 markets show the global scale of poor sleep and its impact on health, work, and relationships"
+    }
+  ]
 }
