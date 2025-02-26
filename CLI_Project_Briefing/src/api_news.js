@@ -57,7 +57,12 @@ export async function printNews(city) {
 
       
 
-
+      articles.forEach(({ title, description }) => {
+        console.log(chalk.whiteBright.bold(
+          "\n                                          ============================= Etic's Times Journal ============================= "
+        ));
+        console.log(chalk.blue.bold("📌  News:", title));
+        console.log(chalk.whiteBright.bold("📝 "),description.substring(0, 120) + "...",)});
       return {
         title: articles.title,
         description: articles.author,
