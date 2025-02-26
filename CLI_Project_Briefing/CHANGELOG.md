@@ -1,5 +1,22 @@
 # Changelog
+## 0.8.2 - 2025-02-26
+### FIX: Logging Improvements
+- Resolve JSON serialization issues
+- Fix date formatting in log filenames
+- Add error catching for file writes
 
+## 0.8.1 - 2025-02-26
+### FEAT: Help System
+- Add --help flag implementation
+- Create interactive welcome message
+- Develop usage examples display
+
+## 0.8.0 - 2025-02-26
+### FEAT: Saving Data System
+- Implement --save flag for JSON output
+- Add date tracking in log entries
+- Configure Winston logger for all services
+- Separate log files per service (weather/quotes/news)
 
 ## 0.7.0 - 2025-02-26
 ### FEAT: CLI Core Features
