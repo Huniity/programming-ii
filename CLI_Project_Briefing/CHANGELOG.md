@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 - 2025-02-27
+### TEST: Test Implemented with Vitest
+- Testing function with Vitest
+- Change Documentation
+
 ## 1.0.0 - 2025-02-27
 ### FEAT: Full Release - My Briefing CLI
 - Finalize all API integrations
