@@ -38,12 +38,18 @@ export async function randomQuote() {
       console.log((chalk.whiteBright.bold("\n📜 QUOTE OF THE DAY 📜\n")),);
       console.log(`"${quoteObject.quote}"\n- ${quoteObject.author}\n`);
 
-
+      return {
+        quote: quoteObject.quote,
+        author: quoteObject.author,
+      };
     } else {
       console.log("❌ No quotes found with 250 or fewer characters. ❌");
     }
 
-
+    return {
+      quote: data.content,
+      author: data.author,
+    };
   } catch (error) {
     logger.error(`❌ Quote error: ${error.message} ❌`);
   }
