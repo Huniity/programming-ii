@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config()
 
 
-const logger = getLogger("NEWS", `../winston.logs/news.logs`);
+const logger = getLogger("NEWS", `./winston.logs/news.logs`);
 const API_KEY = process.env.API_KEY_NEWS
 
 /**
@@ -53,22 +53,20 @@ export async function randomNews(city) {
 export async function printNews(city) {
   try {
     const articles = await randomNews(city);
-
     if (articles.length > 0) {
-      // const jsonObject = { articles };
+
+      
 
       articles.forEach(({ title, description }) => {
         console.log(chalk.whiteBright.bold(
           "\n                                          ============================= Etic's Times Journal ============================= "
         ));
         console.log(chalk.blue.bold("📌  News:", title));
-        console.log(
-          chalk.whiteBright.bold("📝 "),
-          description.substring(0, 120) + "...",
-        );
-      });
-
-      // fs.writeFileSync("news.json", JSON.stringify(jsonObject, null, 2));
+        console.log(chalk.whiteBright.bold("📝 "),description.substring(0, 120) + "...",)});
+      return {
+        title: articles.title,
+        description: articles.author,
+      };   
       // console.log("Articles have been written to news.json");
     } else {
       logger.error("❌ No articles found. ❌");

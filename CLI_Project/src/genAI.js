@@ -3,7 +3,7 @@ import { getLogger } from './logger.js';
 import dotenv from "dotenv";
 dotenv.config()
 
-const logger = getLogger('GEN AI', `../winston.logs/genai.logs`);
+const logger = getLogger('GEN AI', `./winston.logs/genai.logs`);
 const API_KEY = process.env.API_KEY_GENAI
 
 const genAI = new GoogleGenerativeAI(`${API_KEY}`);

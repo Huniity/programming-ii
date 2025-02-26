@@ -1,9 +1,10 @@
 import { getLogger } from "./logger.js";
 import dotenv from "dotenv";
+import chalk from "chalk";
 dotenv.config()
 
 
-const logger = getLogger("QUOTES", "../winston.logs/quote.logs");
+const logger = getLogger("QUOTES", "./winston.logs/quote.logs");
 
 const API_KEY = process.env.API_KEY_QUOTE
 /**
@@ -34,6 +35,8 @@ export async function randomQuote() {
         quote: filteredQuotes[0].quote,
         author: filteredQuotes[0].author,
       };
+      console.log((chalk.whiteBright.bold("\n📜 QUOTE OF THE DAY 📜\n")),);
+      console.log(`"${quoteObject.quote}"\n- ${quoteObject.author}\n`);
 
       return {
         quote: quoteObject.quote,

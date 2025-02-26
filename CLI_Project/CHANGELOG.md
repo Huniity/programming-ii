@@ -27,8 +27,8 @@
 - Develop usage examples display
 
 ## 0.6.0 - 2025-02-26
-### FEAT: Logging System
-- Implement --log flag for JSON output
+### FEAT: Saving Data System
+- Implement --save flag for JSON output
 - Add date tracking in log entries
 - Configure Winston logger for all services
 - Separate log files per service (weather/quotes/news)
@@ -47,9 +47,9 @@
 
 ## 0.5.0 - 2025-02-25
 ### FEAT: AI Integration
-- Add Gemini 2.0 Flash model integration
+- Add Chat GPT-3 model integration
 - Implement weather-based activity suggestions
-- Develop AI prompt engineering system
+- Develop AI prompt
 - Add city-specific activity filtering
 
 ## 0.4.8 - 2025-02-25
@@ -65,7 +65,7 @@
 - Add input validation system
 
 ## 0.4.0 - 2025-02-24
-### FEAT: Geocoding System
+### FEAT: Geocoding API
 - Replace direct coordinates with city lookup
 - Implement country code detection for news
 - Add weather code translation system
@@ -73,12 +73,12 @@
 
 ## 0.3.1 - 2025-02-24
 ### DOCS: Weather Documentation
-- Add weather code documentation
+- Add weather code documentation (utils.js)
 - Update API usage examples
 - Create emoji reference guide
 
 ## 0.3.0 - 2025-02-24
-### FEAT: Weather Core Service
+### FEAT: Weather API 
 - Implement Open-Meteo API integration
 - Add temperature/condition reporting
 - Create weather emoji mapping system
@@ -86,38 +86,40 @@
 
 ## 0.2.5 - 2025-02-24
 ### FIX: Module Exports
-- Standardize ES module exports
+- Fixing ES module exports
 - Fix circular dependency issues
 - Validate API response shapes
+- Fixing API Logs
 
 ## 0.2.2 - 2025-02-24
 ### FIX: News Formatting
 - Change from 3 to 10 article titles
 - Remove description display
-- Fix country code detection edge cases
+- Fix country code detection
 
 ## 0.2.0 - 2025-02-23
-### FEAT: News Service
+### FEAT: News API
 - Add Newsdata.io API integration
 - Implement country-specific news filtering
-- Develop article truncation system
-- Create news banner formatting
+- Develop article truncation system (180 chars)
+- Create news formatting
 
 ## 0.1.5 - 2025-02-23
 ### CHORE: Logging Infrastructure
-- Implement Winston for quote service
+- Implement Winston for Quote API
 - Create log rotation system
 - Add error tracking middleware
 
 ## 0.1.2 - 2025-02-23
-### FIX: API Stability
+### FIX: API fetching
 - Implement fetch error handling
 - Add response validation checks
-- Create fallback empty states
+- Setting up Logger
 
 ## 0.1.0 - 2025-02-23
-### FEAT: Quote Service Foundation
-- Implement API-Ninjas quote integration
+### FEAT: Quote API
+- Implement quote API
 - Add 250-character quote filtering
 - Create quote display formatting
 - Develop basic error handling
+- Fixing minor typos.
