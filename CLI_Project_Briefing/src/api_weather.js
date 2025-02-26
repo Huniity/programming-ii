@@ -31,7 +31,7 @@ export async function getWeatherActivity(city) {
     const current = weatherData.current_weather;
     const weatherInfo = code_list[current.weathercode];
     
-
+    const activitySuggestion = await fetchActivitySuggestion(weatherInfo.condition,city);
 
     const conditionEmoji = weatherEmojis[weatherInfo.condition] || "🌍";
      const tableData = {
