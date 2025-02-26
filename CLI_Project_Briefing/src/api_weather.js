@@ -20,7 +20,7 @@ const code_list = WEATHER_CODES;
 export async function getWeatherActivity(city) {
   try {
 
-    
+    const { latitude, longitude, country } = await getGeoLocation(city);
     
 
     const weatherRes = await fetch(

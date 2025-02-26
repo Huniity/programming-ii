@@ -1,5 +1,19 @@
 # Changelog
 
+
+## 0.3.1 - 2025-02-24
+### CHORE: Preparing for AI Intregration
+- Add weather code documentation (utils.js)
+- Update API usage examples
+- Create emoji reference guide
+
+## 0.3.0 - 2025-02-24
+### FEAT: Weather API 
+- Implement Open-Meteo API integration
+- Add temperature/condition reporting
+- Create weather emoji mapping system
+- Develop base weather table display
+
 ## 0.3.2 - 2025-02-24
 ### CHORE: News Formatting
 - Change from 3 to 10 article titles
