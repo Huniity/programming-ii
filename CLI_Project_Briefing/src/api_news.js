@@ -30,7 +30,7 @@ export async function randomNews(city) {
     const rawData = await newsRes.json();
     if (!rawData.results || rawData.results.length === 0) throw new Error ("❌ No news found for this country. ❌");
 
-    return rawData.results.slice(0, 10).map(({ title, description }) => ({
+    return rawData.results.slice(0, 3).map(({ title, description }) => ({
       title,
       description,
     }));
